@@ -1,12 +1,14 @@
 const express = require('express');
 const authRoutes = require('./authRoutes');
+const openAIRoutes = require('./openAIRoutes');
 
 const router = express.Router();
 
 router.use('/auth', authRoutes);
 
-module.exports = router;
+router.use('/openai', openAIRoutes);
 
+module.exports = router;
 
 /**
  * 
