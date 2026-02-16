@@ -1,12 +1,14 @@
 const express = require('express');
 const authRoutes = require('./authRoutes');
 const openAIRoutes = require('./openAIRoutes');
-
+const lipSyncRoutes = require('./lipSyncRoutes');
 const router = express.Router();
 
 router.use('/auth', authRoutes);
 
 router.use('/openai', openAIRoutes);
+
+router.use('/lipsync', lipSyncRoutes);
 
 module.exports = router;
 
